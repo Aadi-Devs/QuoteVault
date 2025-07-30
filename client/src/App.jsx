@@ -13,8 +13,8 @@ function App() {
       // const response = await axios.get("http://localhost:3000/quotes");
       // setQuote(response.data.quote);     //! use this when backend is deployed
       setLoading(true);
-      const response = await axios.get("http://api.quotable.io/random");
-      setQuote(response.data.content);
+      const response = await axios.get("https://quoteslate.vercel.app/api/quotes/random");
+      setQuote(response.data.quote);
       setAuthor(response.data.author);
       // console.log(response.data.content);
     }catch(err){
